@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf dist",
+    "build": "webpack --mode production",
+    "rollup": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,22 @@
   "bugs": {
     "url": "https://github.com/Ketilpedersen/kviss/issues"
   },
-  "homepage": "https://github.com/Ketilpedersen/kviss#readme"
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/standalone": "^7.6.4",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.6.0",
+    "rimraf": "^3.0.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "homepage": "https://github.com/Ketilpedersen/kviss#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2"
+  }
 }
